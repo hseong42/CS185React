@@ -1,0 +1,15 @@
+.header {
+
+}
+
+.nav-bar  {
+	display: flex;
+}
+
+.nav-bar > div {
+	padding: 10px;
+}
+
+#main-body {
+	display: flex;
+}
