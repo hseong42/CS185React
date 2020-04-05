@@ -13,3 +13,7 @@
 #main-body {
 	display: flex;
 }
+
+#main-body > div {
+	padding: 20px;
+}
