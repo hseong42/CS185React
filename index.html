@@ -2,39 +2,46 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>About Me</title>
+	<script src="script.js"> </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title>Home Page</title>
 </head>
-<body>
+<body onload="load()">
 	<div class="header">
 		<h1 align="center">Home Page</h1>
 	</div>
-		<div class="nav-bar">
-		<div>
+	<div class="nav-bar">
+		<div class="main">
 			<a href="index.html">Home</a>
 		</div>
 		<div>
-			<a href="images.html">Equipment</a>
+			<a href="images.html">Gallery</a>
 		</div>
 		<div>
-			<a href="videos.html">Process</a>
+			<a href="videos.html">Videos</a>
 		</div>
 		<div>
 			<a href="projects.html">Links</a>
 		</div>
 	</div>
+
 	<div id="main-body">
 		<div class="homeimage">
-			<img src="images/target.jpg">
+			<img onclick="bigPicture(this.src)" src="images/targets.jpg">
 		</div>
-		<div class="center">
+		<div>
 			<h2>About this Site</h2>
 			<p>
 				Archery is a sport that most people still find more unique than commonplace, which leads to the lack of clubs or organizations centered around it in some areas.  Despite that, it's a sport that found a spot in my heart and one that I enjoy over all others.
 			</p>
 			<p>
-				Through showing my own experience and knowledge of archery - though I am not an expert on the subject - I hope that more people will find archery interesting instead of intimidating, and try it out! 
+				Through sharing pictures and videos of exciting moments I've experienced through archery, I hope other people will grow interested in the sport and try it out!  And if things turn out well, they might enjoy it just as much as I do!
 			</p>
 		</div>
 	</div>
+
+	<div id="imagesModal" class="modal" onclick="closePicture()">
+        <img id="image" class="modalImage">
+    </div>
 </body>
 </html>

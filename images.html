@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Doodles</title>
+	<title>Gallery</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"> </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body>
+
+<body onload="load()">
 	<div class="header">
-		<h1 align="center">About Equipment</h1>
+		<h1 align="center">Gallery</h1>
 	</div>
-		<div class="nav-bar">
+
+	<div class ="bodyproj" align="center">
+		<p>
+			Here are a couple pictures depicting fun times I've had and watched other people have through archery!
+		</p>
+	</div>
+
+	<div class="nav-bar">
 		<div>
 			<a href="index.html">Home</a>
 		</div>
-		<div>
-			<a href="images.html">Equipment</a>
+		<div class="main">
+			<a href="images.html">Gallery</a>
 		</div>
 		<div>
-			<a href="videos.html">Process</a>
+			<a href="videos.html">Videos</a>
 		</div>
 		<div>
 			<a href="projects.html">Links</a>
 		</div>
 	</div>
-	<div class ="bodyimg">
-		<p>
-			One of my few hobbies is doodling - it's something I enjoy doing whenever I have time.  Combined with my love for videogames, it often results in me drawing characters or concepts from games I like, such as Animal Crossing and Danganronpa!
-		</p>
-	</div>
 	<div class="parent">
-		<figure class="imgchild portrait">
-			<img src="images/ACPCIbuki.png" alt="1">
+		<figure class="child portrait">
+			<img onclick="bigPicture(this.src)" src="images/shoot2.jpg" alt="1">
 		</figure>
-		<figure class="imgchild landscape">
-			<img src="images/ACDRO_Comp.png" alt="1">
+		<figure class="child portrait">
+			<img onclick="bigPicture(this.src)" src="images/shoot.jpg" alt="1">
 		</figure>
-		<figure class="imgchild">
-			<img src="images/YoungMiiko.png" alt="1">
+		<figure class="child">
+			<img onclick="bigPicture(this.src)" src="images/target.jpg" alt="1">
 		</figure>
-		<figure class="imgchild">
-			<img src="images/MR_lines.png" alt="1">
+		<figure class="child">
+			<img onclick="bigPicture(this.src)" src="images/arrowPull.jpg" alt="1">
 		</figure>
-		<figure class="imgchild">
-			<img src="images/MR_process.png" alt="1">
+		<figure class="child">
+			<img onclick="bigPicture(this.src)" src="images/outdoorRange.jpg" alt="1">
 		</figure>
-		<figure class="imgchild">
-			<img src="images/MR_done.png" alt="1">
+		<figure class="child">
+			<img onclick="bigPicture(this.src)" src="images/atLine.jpg" alt="1">
+		</figure>
+		<figure class="child">
+			<img onclick="bigPicture(this.src)" src="images/field.jpg" alt="1">
+		</figure>
+		<figure class="child portrait">
+			<img onclick="bigPicture(this.src)" src="images/JOAD.jpg" alt="1">
+		</figure>
+		<figure class="child">
+			<img onclick="bigPicture(this.src)" src="images/AT1.jpg" alt="1">
+		</figure>
+		<figure class="child">
+			<img onclick="bigPicture(this.src)" src="images/AT2.jpg" alt="1">
 		</figure>
 	</div>
+
+	<div id="imagesModal" class="modal" onclick="closePicture()">
+        <img id="image" class="modalImage">
+    </div>
+
+    <button id="toTop" onclick="toTop()">Go To Top</button>
+
 </body>
 </html>
