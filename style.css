@@ -1,10 +1,10 @@
-.header {
-
+body {
+	background-color: #fffeec;
 }
 
 .nav-bar  {
 	display: flex;
-	background-color: paleturquoise;
+	background-color: #556fb5;
 }
 
 .nav-bar > div {
@@ -18,11 +18,11 @@
 }
 
 .nav-bar > div:hover {
-	background-color: powderblue;
+	background-color: #DB7093;
 }
 
 .nav-bar > div.main {
-	background-color: mediumturquoise;
+	background-color: #e4508f;
 }
 
 .nav-bar a:visited {
@@ -37,6 +37,7 @@ a:hover, a:visited, a:link, a:active {
 #main-body {
 	display: flex;
 	position:relative;
+	background-color: #aeddcd;
 }
 
 #main-body > div {
@@ -53,7 +54,7 @@ a:hover, a:visited, a:link, a:active {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 1rem;
-	background-color: pink;
+	background-color: #aeddcd;
 }
 
 .child {
@@ -62,23 +63,20 @@ a:hover, a:visited, a:link, a:active {
 
 .parentlist {
 	padding: 10px;
-	background-color: pink;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	align-items: center;
+	background-color: #aeddcd;
 }
 
 .childlist {
 	margin: auto;
-	background-color: white;
 }
 
 .icon {
 	margin: auto;
-}
-
-.center {
-	position: absolute
- 	top: 50%;
- 	left: 50%;
- 	transform: translate(-50%, -50%);
+	background-color: white;
 }
 
 .body {
@@ -101,10 +99,18 @@ figure {
 }
 
 .icon {
+	position:relative;
 	height: 10%;
 	width: 10%;
 	min-height: 100px;
 	min-width: 100px;
+}
+
+.icon > a {
+	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
 }
 
 .list {
@@ -112,9 +118,6 @@ figure {
 	
 }
 
-.page {
-	background-color: pink;
-}
 .listtext {
 	padding: 30px 0;
 	margin: 10px;
@@ -160,6 +163,7 @@ video {
 
 #toTop {
 	position: fixed;
+	display: none;
 	right: 10px;
 	bottom: 10px;
 }

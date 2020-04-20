@@ -34,8 +34,8 @@ function keep(click) {
 }
 
 function scroll() {
-	if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
-		toTop = document.getElementById("toTop")
+	toTop = document.getElementById("toTop")
+	if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
 		toTop.style.display = "block"
 	} else {
 		toTop.style.display = "none"
