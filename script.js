@@ -43,7 +43,11 @@ function scroll() {
 }
 
 
+
 function toTop() {
-	document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
+	const btn = document.querySelector("#top")
+	btn.addEventListener("click", event => {
+		document.body.scrollTop = 0
+    	document.documentElement.scrollTop = 0
+	})
 }
