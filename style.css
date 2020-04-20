@@ -26,7 +26,7 @@ body {
 }
 
 .nav-bar a:visited {
-	color: gray;
+	color: darkslategray;
 }
 
 a:hover, a:visited, a:link, a:active {
