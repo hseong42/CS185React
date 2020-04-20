@@ -6,9 +6,6 @@ function load() {
         click.stopPropagation()
     })
 
-	$("body").click(function() {
-    })
-
     $("#imagesModal").click(function() {
     	$("#imagesModal").hide()
     })
@@ -42,9 +39,7 @@ function scroll() {
 	}
 }
 
-
-
-function toTop() {
-	document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
-}
+function goToTop() {
+		document.body.scrollTop = 0
+	    document.documentElement.scrollTop = 0
+	}
