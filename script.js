@@ -1,15 +1,6 @@
 function load() {
 	window.addEventListener("scroll", scroll)
 
-	$(".img").on("click", function(click){
-        $("#imagesModal").show()
-        click.stopPropagation()
-    })
-
-    $("#imagesModal").click(function() {
-    	$("#imagesModal").hide()
-    })
-
     $("#image").click(function(click) {
         click.stopPropagation()
     })
