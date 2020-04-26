@@ -18,34 +18,34 @@ export class Images extends Component {
 				<SRLWrapper options={options}>
 					<div className="parent">
 						<figure className="child portrait">
-							<img src={require("./images/shoot2.jpg")}/>
+							<img src={require("./images/shoot2.jpg")} alt=''/>
 						</figure>
 						<figure className="child portrait">
-							<img src={require("./images/shoot.jpg")}/>
+							<img src={require("./images/shoot.jpg")} alt=''/>
 						</figure>
 						<figure className="child">
-							<img src={require("./images/target.jpg")}/>
+							<img src={require("./images/target.jpg")} alt=''/>
 						</figure>
 						<figure className="child">
-							<img src={require("./images/arrowPull.jpg")} />
+							<img src={require("./images/arrowPull.jpg")} alt=''/>
 						</figure>
 						<figure className="child">
-							<img src={require("./images/outdoorRange.jpg")}/>
+							<img src={require("./images/outdoorRange.jpg")} alt=''/>
 						</figure>
 						<figure className="child">
-							<img src={require("./images/atLine.jpg")}/>
+							<img src={require("./images/atLine.jpg")} alt=''/>
 						</figure>
 						<figure className="child">
-							<img src={require("./images/field.jpg")}/>
+							<img src={require("./images/field.jpg")} alt=''/>
 						</figure>
 						<figure className="child portrait">
-							<img src={require("./images/JOAD.jpg")}/>
+							<img src={require("./images/JOAD.jpg")} alt=''/>
 						</figure>
 						<figure className="child">
-							<img src={require("./images/At1.jpg")}/>
+							<img src={require("./images/At1.jpg")} alt=''/>
 						</figure>
 						<figure className="child">
-							<img src={require("./images/AT2.jpg")}/>
+							<img src={require("./images/AT2.jpg")} alt=''/>
 						</figure>
 					</div>
 				</SRLWrapper>

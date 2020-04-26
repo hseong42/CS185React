@@ -7,13 +7,13 @@ import Links from './Links'
 export class Body extends Component {
 	displayContent = () => {
 		var activeTab = this.props.activeTab
-		if(activeTab == 1)
+		if(activeTab === 1)
 			return <Home/>
-		else if (activeTab == 2) 
+		else if (activeTab === 2) 
 			return <Images/>
-		else if (activeTab == 3)
+		else if (activeTab === 3)
 			return <Videos/>
-		else if (activeTab == 4)
+		else if (activeTab === 4)
 			return <Links/>
 	}
 	render() {

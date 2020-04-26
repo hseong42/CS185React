@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 export class Header extends Component {
 	displayContent = () => {
 		var activeTab = this.props.activeTab
-		if(activeTab == 1)
+		if(activeTab === 1)
 			return (<h1 align="center">Home Page</h1>)
-		else if (activeTab == 2) {
+		else if (activeTab === 2) {
 			return (
 				<div>
 					<h1 align="center">Gallery</h1>
@@ -17,7 +17,7 @@ export class Header extends Component {
 				</div>
 				)
 		}
-		else if (activeTab == 3)
+		else if (activeTab === 3)
 			return (
 				<div>
 					<h1 align="center">Videos</h1>
@@ -27,7 +27,7 @@ export class Header extends Component {
 						</p>
 					</div>
 				</div>)
-		else if (activeTab == 4)
+		else if (activeTab === 4)
 			return (
 				<div>
 					<h1 align="center">Additional Links</h1>

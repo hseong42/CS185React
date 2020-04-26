@@ -13,7 +13,7 @@ export class Home extends Component {
 			<SRLWrapper options={options}>
 				<div className="main-body">
 					<div className="homeimage">
-						<img src={require("./images/targets.jpg")}/>
+						<img src={require("./images/targets.jpg")} alt=''/>
 					</div>
 					<div>
 						<h2>About this Site</h2>
