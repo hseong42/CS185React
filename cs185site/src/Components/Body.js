@@ -3,7 +3,7 @@ import Home from './Home'
 import Images from './Images'
 import Videos from './Videos'
 import Links from './Links'
-import Guestbook from './Form'
+import Form from './Form'
 
 export class Body extends Component {
 	displayContent = () => {
@@ -17,7 +17,7 @@ export class Body extends Component {
 		else if (activeTab === 4)
 			return <Links/>
 		else if (activeTab === 5)
-			return <Guestbook data={this.props.data}/>
+			return <Form/>
 	}
 	render() {
 		return (this.displayContent());

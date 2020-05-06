@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css'
+import config from '../config'
 
 const firebase = require('firebase')
 
@@ -12,6 +13,7 @@ class Form extends Component {
 		    message: '',
 		    private: null,
 		    email: '',
+		    time: null,
 		    display: []
 	    }
 	    this.handleChange = this.handleChange.bind(this);
@@ -85,7 +87,8 @@ class Form extends Component {
 		    description: this.state.description,
 		    message: this.state.message,
 		    private: this.state.private,
-		    email: this.state.email
+		    email: this.state.email,
+		    time:  Date(firebase.database.ServerValue.TIMESTAMP)
 		  }
 		  itemsRef.push(item);
 		  this.setState({
@@ -93,7 +96,8 @@ class Form extends Component {
 			description: '',
 			message: '',
 			private: null,
-			email: ''
+			email: '',
+			time:null
 		  });
            alert("Form submitted");
         } 
@@ -126,6 +130,7 @@ class Form extends Component {
 	              			if (item.private === "false") {
 					        return (
 					          <li key={item.id}>
+					          	<p>{item.time}</p>
 					            <h3>{item.name}</h3>
 						        <p>{item.description}</p>
 					            <p>Message: {item.message}</p>
@@ -140,20 +145,34 @@ class Form extends Component {
     );
   }
   componentDidMount() {
-  	let newState=[];
-  	for (let item in this.props.data) {
-  		newState.push({
-	        id: item,
-	        name: this.props.data[item].name,
-	        description: this.props.data[item].description,
-	        message: this.props.data[item].message,
-	        private: this.props.data[item].private,
-	        email: this.props.data[item].email
-	      });
-  	}
+  	firebase.initializeApp(config)
+  	let ref = firebase.database().ref('messages')
+  	ref.on('value', snapshot => {
+  		let newState=[];
+  		const data = snapshot.val()
+	  	for (let item in data) {
+	  		newState.push({
+		        id: item,
+		        name: data[item].name,
+		        description: data[item].description,
+		        message: data[item].message,
+		        private: data[item].private,
+		        email: data[item].email,
+		        time: data[item].time
+		      });
+	  	}
   	this.setState({
   		display: newState
   	});
+  });
+}
+
+  componentDidUpdate(prevProps, prevState, snapshot){
+    //only call set state here if it is wrapped in a condition
+    //if you initialize this.state.shouldUpdate and have not changed it yet then this will not run
+    if(this.state.shouldUpdate !== prevState.shouldUpdate){
+      //same code as above to retrieve the data 
+    }
   }
 }
 export default Form;
