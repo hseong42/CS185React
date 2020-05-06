@@ -95,7 +95,6 @@ class Form extends Component {
 		    name: '',
 			description: '',
 			message: '',
-			private: null,
 			email: '',
 			time:null
 		  });
@@ -106,26 +105,25 @@ class Form extends Component {
   	render() {
     	return (
       	<div className='app'>
-      	{console.log(this.state.display)}
         	<div className='container'>
-          	<div className='add-item'>
-          		<h2 align='center'> Enter Messages Here</h2>
-              		<form onSubmit={this.handleSubmit}>
-		                <input type="text" name="name" placeholder="What's your name?" onChange={this.handleChange} value={this.state.name}/>
-		                <input type="text" name="description" placeholder="Give a short description of yourself." onChange={this.handleChange} value={this.state.description}/>
-		                <input type="text" name="message" placeholder="What do you have to say?" onChange={this.handleChange} value={this.state.message}/>
-		                <p>Would you like your message to be private?</p>
-		                <input type="radio" id="yes" name="private" onChange={this.handleChange} value={true}/>
-		                <label for="yes">Yes</label>
-						<input type="radio" id="no" name="private" onChange={this.handleChange} value={false}/>
-						<label for="no">No</label>
-		                <input type="email" name="email" placeholder="If you want to be contacted, what's your email?" onChange={this.handleChange} value={this.state.email} />
-		                <button>Send Message</button>
-              		</form>
-          	</div>
-          	<section className='display-item'>
+	          	<div className='add-item'>
+	          		<h2 align='center'> Enter Messages Here</h2>
+	              		<form onSubmit={this.handleSubmit}>
+			                <input type="text" name="name" placeholder="What's your name?" onChange={this.handleChange} value={this.state.name}/>
+			                <input type="text" name="description" placeholder="Give a short description of yourself." onChange={this.handleChange} value={this.state.description}/>
+			                <input type="text" name="message" placeholder="What do you have to say?" onChange={this.handleChange} value={this.state.message}/>
+			                <p>Would you like your message to be private?</p>
+			                <input type="radio" id="yes" name="private" onChange={this.handleChange} value={true}/>
+			                <label for="yes">Yes</label>
+							<input type="radio" id="no" name="private" onChange={this.handleChange} value={false}/>
+							<label for="no">No</label>
+			                <input type="email" name="email" placeholder="If you want to be contacted, what's your email?" onChange={this.handleChange} value={this.state.email} />
+			                <button>Send Message</button>
+	              		</form>
+	          	</div>
+          	<div className='display-item'>
             	<div className='wrapper'>
-              		<ul>
+              		<ul className='entry'>
 	              		{this.state.display.map((item) => {
 	              			if (item.private === "false") {
 					        return (
@@ -139,7 +137,7 @@ class Form extends Component {
 					      }})}
               		</ul>
             	</div>
-          	</section>
+          	</div>
         	</div>
       	</div>
     );

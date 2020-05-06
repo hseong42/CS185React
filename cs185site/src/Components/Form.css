@@ -1,6 +1,6 @@
-.fa {
-  font-size: 22px;
-  transform: translateY(50deg);  
+.container {
+  display: flex;
+  flex-direction: row;
 }
 
 .add-item > h2 {
@@ -26,12 +26,19 @@
   box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
   margin-bottom: 34px;  
   width: 150%;
+  height: 450px;
   margin-right: auto;
 }
 
 .display-item {
-  width: 65%;
+  width: 1000px;
+  height: 450px;
   margin-left: 50px;
+  border-radius: 2px;
+  border-top: 3px solid #103D5D;
+  background-color: rgb(237, 237, 237);
+  overflow-y: scroll;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
 }
 
 .add-item form {
