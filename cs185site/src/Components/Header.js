@@ -37,6 +37,8 @@ export class Header extends Component {
 						</p>
 					</div>
 				</div>)
+		else if (activeTab === 5)
+			return (<h1 align="center">Guestbook</h1>)
 	}
 	render() {
 		return (this.displayContent());
