@@ -74,7 +74,7 @@ export class App extends Component {
             'tt0848228', 'tt0097814', 'tt5323662', 'tt0110357','tt0364569','tt0364385'];
     let arr = [];
     IMDbs.forEach(element => 
-      axios.get ('http://www.omdbapi.com/',{
+      axios.get ('https://www.omdbapi.com/',{
       params: {
         apikey: "b1800172",
         i: element
