@@ -22,6 +22,7 @@ export class Movies extends Component {
 	render() {
 		return (
 			<div className='moviebody'>
+			<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/> 
 				<SRLWrapper options={options}>
 					<div className="movieParent">
  	              		{this.props.display.map((item) => {
