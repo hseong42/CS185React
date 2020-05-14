@@ -5,11 +5,14 @@ import Body from "./Components/Body"
 import Header from "./Components/Header"
 import SimpleReactLightbox from 'simple-react-lightbox'
 
+const axios = require('axios');
+
 export class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeTab: 1
+      activeTab: 1,
+      display: []
     }
     this.changeTab = (id) => {
       this.setState({
@@ -39,6 +42,10 @@ export class App extends Component {
     {
       id: 5,
       title: 'Guestbook'
+    },
+    {
+      id: 6,
+      title: 'Movies'
     }
     ]
     return (
@@ -54,6 +61,7 @@ export class App extends Component {
           </div>
           <div className="main-body">
             <Body activeTab={this.state.activeTab}
+            display={this.state.display}
             />
           </div>
         </SimpleReactLightbox>
@@ -61,6 +69,37 @@ export class App extends Component {
     );
   }
 
+  componentDidMount()  {
+    const IMDbs = ['tt9541602', 'tt0120762', 'tt0317705', 'tt5700672', 'tt0441773', 
+            'tt0848228', 'tt0097814', 'tt5323662', 'tt0110357','tt0364569','tt0364385'];
+    let arr = [];
+    IMDbs.forEach(element => 
+      axios.get ('http://www.omdbapi.com/',{
+      params: {
+        apikey: "b1800172",
+        i: element
+      }
+    })
+      .then((response) => {
+      var caption = "Title: " + response.data.Title + "\nDirected by: "
+          +response.data.Director+"\nRating: "
+          +response.data.imdbRating;
+        arr.push({
+            poster: response.data.Poster,
+            title: response.data.Title,
+            director: response.data.Director,
+            rating: response.data.imdbRating,
+            caption: caption
+          });
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    );
+    this.setState({
+        display: arr
+      });
+}
   
 }
 export default App;

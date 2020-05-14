@@ -53,8 +53,31 @@ figure {
   background-color: #aeddcd;
 }
 
+.moviebody {
+  padding: 10;
+  margin: 10;
+  min-width: 90%;
+}
+
+.movieParent {
+  min-width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.moviechild {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
 .child {
   margin: auto;
+}
+
+.movieimg:hover {
+  opacity: 0.5;
 }
 
 .portrait {
@@ -63,6 +86,10 @@ figure {
 
 .landscape {
   grid-column: span 2;
+}
+
+.SRLCaption {
+  white-space: pre
 }
 
 #toTop {

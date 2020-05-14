@@ -9,7 +9,7 @@ export class Header extends Component {
 			return (
 				<div>
 					<h1 align="center">Gallery</h1>
-					<div class ="bodyproj" align="center">
+					<div className ="bodyproj" align="center">
 						<p>
 							Here are a couple pictures depicting fun times I've had and watched other people have through archery!
 						</p>
@@ -21,7 +21,7 @@ export class Header extends Component {
 			return (
 				<div>
 					<h1 align="center">Videos</h1>
-					<div class ="bodyproj" align="center">
+					<div className ="bodyproj" align="center">
 						<p>
 							These are a couple videos of shots I made or recorded other people making.
 						</p>
@@ -31,7 +31,7 @@ export class Header extends Component {
 			return (
 				<div>
 					<h1 align="center">Additional Links</h1>
-					<div class ="bodyproj" align="center">
+					<div className ="bodyproj" align="center">
 						<p>
 							Here are a few additional links that lead to more in depth information about archery and some options on where to go to learn/buy equipment if you want to get started!
 						</p>
@@ -39,6 +39,8 @@ export class Header extends Component {
 				</div>)
 		else if (activeTab === 5)
 			return (<h1 align="center">Guestbook</h1>)
+		else if (activeTab === 6)
+			return (<h1 align="center">Movies</h1>)
 	}
 	render() {
 		return (this.displayContent());
