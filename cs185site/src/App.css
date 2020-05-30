@@ -152,3 +152,88 @@ video {
 .linkBody {
   background-color: #fffeec;
 }
+
+.inputBox {
+  min-width: 80%;
+  padding-left: 20px;
+}
+
+.inputText {
+  padding-bottom: 10px;
+}
+
+.inputButton {
+  max-width: 20%;
+}
+
+.dropdown-menu {
+ left:auto; 
+ display: flex;
+ flex-direction: column;
+}
+
+.button {
+ display: block;
+ width: auto; 
+}
+
+.load {
+  display: flex;
+  align-self: center;
+}
+
+.delete {
+  background-color: red;
+}
+
+.Modal {
+  text-align:center;
+}
+
+.img-responsive {
+    max-height: 100vh;
+    margin: -113px 0;
+    padding: 113px 0;
+}
+
+.ModalBody {
+  display: flex;
+  width: auto;
+}
+
+.top {
+  display: inline-flex;
+}
+
+.searchBar {
+  margin-right: 50px;
+  display: inline-flex;
+  padding: 10px;
+}
+
+.searchButton {
+  justify-content: center;
+  padding: 10px;
+  max-width: 50px;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  color: #000;
+  padding: 18px;
+  font-size: 16px;
+  border: black;
+  display: block;
+  max-height: 5px;
+  min-width: 80%;
+}
+
+.ModalHeader {
+  align-self: center;
+  margin: auto;
+}
+
+.MovieInfo {
+  padding: 10px;
+  font-size: 15px;
+}

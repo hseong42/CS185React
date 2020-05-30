@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Form.css'
-import config from '../config'
 
 const firebase = require('firebase')
 
@@ -143,7 +142,6 @@ class Form extends Component {
     );
   }
   componentDidMount() {
-  	firebase.initializeApp(config)
   	let ref = firebase.database().ref('messages')
   	ref.on('value', snapshot => {
   		let newState=[];

@@ -5,6 +5,8 @@ import Videos from './Videos'
 import Links from './Links'
 import Form from './Form'
 import Movies from './Movies'
+import AddMovie from './AddMovie'
+import CreateList from './CreateList'
 
 export class Body extends Component {
 	displayContent = () => {
@@ -21,6 +23,10 @@ export class Body extends Component {
 			return <Form/>
 		else if (activeTab === 6)
 			return <Movies display={this.props.display}/>
+		else if (activeTab === 7)
+			return <AddMovie/>
+		else if (activeTab === 8)
+			return <CreateList/>
 	}
 	render() {
 		return (this.displayContent());

@@ -4,15 +4,16 @@ import TabList from "./Components/TabList"
 import Body from "./Components/Body"
 import Header from "./Components/Header"
 import SimpleReactLightbox from 'simple-react-lightbox'
+import config from './config';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const axios = require('axios');
+const firebase = require('firebase');
 
 export class App extends Component {
   constructor() {
     super();
     this.state = {
-      activeTab: 1,
-      display: []
+      activeTab: 1
     }
     this.changeTab = (id) => {
       this.setState({
@@ -46,6 +47,14 @@ export class App extends Component {
     {
       id: 6,
       title: 'Movies'
+    },
+    {
+      id: 7,
+      title: 'Add Movie'
+    },
+    {
+      id: 8,
+      title: 'Create List'
     }
     ]
     return (
@@ -60,46 +69,15 @@ export class App extends Component {
             changeTab={this.changeTab}/>
           </div>
           <div className="main-body">
-            <Body activeTab={this.state.activeTab}
-            display={this.state.display}
-            />
+            <Body activeTab={this.state.activeTab}/>
           </div>
         </SimpleReactLightbox>
       </div>
     );
   }
-
-  componentDidMount()  {
-    const IMDbs = ['tt9541602', 'tt0120762', 'tt0317705', 'tt5700672', 'tt0441773', 
-            'tt0848228', 'tt0097814', 'tt5323662', 'tt0110357','tt0364569','tt0364385'];
-    let arr = [];
-    IMDbs.forEach(element => 
-      axios.get ('https://www.omdbapi.com/',{
-      params: {
-        apikey: "b1800172",
-        i: element
-      }
-    })
-      .then((response) => {
-      var caption = "Title: " + response.data.Title + "\nDirected by: "
-          +response.data.Director+"\nRating: "
-          +response.data.imdbRating;
-        arr.push({
-            poster: response.data.Poster,
-            title: response.data.Title,
-            director: response.data.Director,
-            rating: response.data.imdbRating,
-            caption: caption
-          });
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    );
-    this.setState({
-        display: arr
-      });
-}
   
+  componentDidMount() {
+    firebase.initializeApp(config);
+  }  
 }
 export default App;

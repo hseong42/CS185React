@@ -41,6 +41,10 @@ export class Header extends Component {
 			return (<h1 align="center">Guestbook</h1>)
 		else if (activeTab === 6)
 			return (<h1 align="center">Movies</h1>)
+		else if (activeTab === 7)
+			return (<h1 align="center">Add Movie</h1>)
+		else if (activeTab === 8)
+			return (<h1 align="center">Create List</h1>)
 	}
 	render() {
 		return (this.displayContent());
