@@ -26,7 +26,6 @@ export class Movies extends Component {
 	    this.showModal = this.showModal.bind(this)
 	    this.closeModal = this.closeModal.bind(this)
 	    this.deleteMovie = this.deleteMovie.bind(this)
-	    this.dropList = this.dropList.bind(this)
 	    this.getMovies = this.getMovies.bind(this)
 	  }
 
@@ -70,7 +69,6 @@ export class Movies extends Component {
 	}
 
 	addList(item) {
-		console.log("addList")
 		let arr = []
 	  	const itemsRef = firebase.database().ref('listMovie');
 	  	const id = this.state.currentMovie.id
@@ -81,7 +79,7 @@ export class Movies extends Component {
 	            movie: id
 	        })
 		itemsRef.child(key).set(arr);
-		console.log("addList end")
+		this.props.reload()
 	}
 
 	deleteMovie() {
@@ -137,11 +135,6 @@ export class Movies extends Component {
 		this.setState({
 			show: false
 		});
-	}
-
-	dropList(l) {
-		console.log(l)
-		
 	}
 
 	getMovies() {
@@ -269,9 +262,7 @@ export class Movies extends Component {
     if(this.props.ids !== prevProps.ids){
       //same code as above to retrieve the data 
       this.getMovies()
-    } else if (this.props.ids.length !== prevProps.ids.length) {
-    	this.getMovies()
-    }
+    } 
   }
 }
 export default Movies

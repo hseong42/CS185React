@@ -42,6 +42,7 @@ export class Movies extends Component {
 				}
 				this.setState((state, props) => {
 				  return {
+				  	menuTitle: title,
 				  	ids: arr,
 					idsAvail: true};
 					});
