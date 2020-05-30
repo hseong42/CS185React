@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/CS185React/static/css/main.8fd33998.chunk.css",
-    "main.js": "/CS185React/static/js/main.59356ce4.chunk.js",
-    "main.js.map": "/CS185React/static/js/main.59356ce4.chunk.js.map",
+    "main.css": "/CS185React/static/css/main.e497c1de.chunk.css",
+    "main.js": "/CS185React/static/js/main.6b394702.chunk.js",
+    "main.js.map": "/CS185React/static/js/main.6b394702.chunk.js.map",
     "runtime-main.js": "/CS185React/static/js/runtime-main.4f32e8b2.js",
     "runtime-main.js.map": "/CS185React/static/js/runtime-main.4f32e8b2.js.map",
-    "static/js/2.10aabba1.chunk.js": "/CS185React/static/js/2.10aabba1.chunk.js",
-    "static/js/2.10aabba1.chunk.js.map": "/CS185React/static/js/2.10aabba1.chunk.js.map",
+    "static/css/2.4819d237.chunk.css": "/CS185React/static/css/2.4819d237.chunk.css",
+    "static/js/2.74691f85.chunk.js": "/CS185React/static/js/2.74691f85.chunk.js",
+    "static/js/2.74691f85.chunk.js.map": "/CS185React/static/js/2.74691f85.chunk.js.map",
     "index.html": "/CS185React/index.html",
-    "precache-manifest.1435edec3f9e78b27e5b5d174eca2e50.js": "/CS185React/precache-manifest.1435edec3f9e78b27e5b5d174eca2e50.js",
+    "precache-manifest.a3f28df9546fac356cd81b0a832976bd.js": "/CS185React/precache-manifest.a3f28df9546fac356cd81b0a832976bd.js",
     "service-worker.js": "/CS185React/service-worker.js",
-    "static/css/main.8fd33998.chunk.css.map": "/CS185React/static/css/main.8fd33998.chunk.css.map",
-    "static/js/2.10aabba1.chunk.js.LICENSE.txt": "/CS185React/static/js/2.10aabba1.chunk.js.LICENSE.txt",
+    "static/css/2.4819d237.chunk.css.map": "/CS185React/static/css/2.4819d237.chunk.css.map",
+    "static/css/main.e497c1de.chunk.css.map": "/CS185React/static/css/main.e497c1de.chunk.css.map",
+    "static/js/2.74691f85.chunk.js.LICENSE.txt": "/CS185React/static/js/2.74691f85.chunk.js.LICENSE.txt",
     "static/media/A360.png": "/CS185React/static/media/A360.85237077.png",
     "static/media/AT2.jpg": "/CS185React/static/media/AT2.d90b16d5.jpg",
     "static/media/ATLogo.png": "/CS185React/static/media/ATLogo.b7b3362a.png",
@@ -34,8 +36,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4f32e8b2.js",
-    "static/js/2.10aabba1.chunk.js",
-    "static/css/main.8fd33998.chunk.css",
-    "static/js/main.59356ce4.chunk.js"
+    "static/css/2.4819d237.chunk.css",
+    "static/js/2.74691f85.chunk.js",
+    "static/css/main.e497c1de.chunk.css",
+    "static/js/main.6b394702.chunk.js"
   ]
 }
