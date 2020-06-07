@@ -7,6 +7,7 @@ import Form from './Form'
 import Movies from './Movies'
 import AddMovie from './AddMovie'
 import CreateList from './CreateList'
+import Graph from './Graph'
 
 export class Body extends Component {
 	displayContent = () => {
@@ -27,6 +28,8 @@ export class Body extends Component {
 			return <AddMovie/>
 		else if (activeTab === 8)
 			return <CreateList/>
+		else if (activeTab === 9)
+			return <Graph/>
 	}
 	render() {
 		return (this.displayContent());
