@@ -56,19 +56,19 @@ export class Graph extends Component {
 			.attr("stroke-width", d => Math.sqrt(d.value));
 
 		const color = (node) => {
-			if (node.group == 1)
+			if (node.group === 1)
 				return d3.color("blue");
 			return d3.color("pink");
 		}
 
 		const radius = (node) => {
-			if (node.group == 1)
+			if (node.group === 1)
 				return 60;
 			return 20;
 		}
 
 		const simulation = d3.forceSimulation(obj_nodes)
-			.force("link", d3.forceLink().links(links).id(d => { return d.index;}).distance(200))
+			.force("link", d3.forceLink().links(obj_links).id(d => { return d.index;}).distance(200))
 			.force("charge", d3.forceManyBody())
 			.force("center", d3.forceCenter(width/2, height/2));
 
